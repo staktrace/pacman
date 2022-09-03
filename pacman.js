@@ -221,6 +221,12 @@ Pacman.Ghost = function (game, map, colour) {
         var oldPos = position,
             onGrid = onGridSquare(position),
             npos   = null;
+
+        // kats: Remove this return to allow the ghosts to move
+        //return {
+        //    "new" : position,
+        //    "old" : position
+        //};
         
         if (due !== direction) {
             
@@ -775,7 +781,8 @@ var PACMAN = (function () {
     var state        = WAITING,
         audio        = null,
         ghosts       = [],
-        ghostSpecs   = ["#00FFDE", "#FF0000", "#FFB8DE", "#FFB847"],
+        // kats: ghost
+        ghostSpecs   = [],//"#00FFDE", "#FF0000", "#FFB8DE", "#FFB847"],
         eatenCount   = 0,
         level        = 0,
         tick         = 0,
